@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head prefix="og: http://ogp.me/ns# profile: http://ogp.me/ns/profile#">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Fábio César S. C. de Melo" />
+    <meta name="description" content="Essa página contém um currículo com informações básicas e serve de portfólio para os conteúdos que eu aprendi sobre html" />
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content="Portfólio - Fábio César" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="./assets/images/logo.jpeg" />
+    <meta property="og:image:width" content="300px" />
+    <meta property="og:image:heigth" content="270px" />
+    <meta property="profile:first_name" content="Fábio" />
+    <meta property="profile:last_name" content="Melo" />
+    <meta property="profile:username" content="fabiocesar" />
+    <meta property="profile:gender" content="male" />
+    <meta property="og-title" content="Portfólio Currículo" />
+    <link rel="icon" href="./assets/images/logo.jpeg" type="image/jpeg" />
+    <title>Portfólio - Fábio César</title>
+</head>
+<body>
+    <header>
+        <h1>Currículo Portfólio</h1>
+        <h2>
+            Perfil
+        </h2>
+        <img src="./assets/images/profile.jpg" />
+        <ul>
+            <li>Nome: Fábio César Santos Carvalho de Melo</li>
+            <li>Data de Nascimento: 15/10/1998</li>
+            <li>Gênero: Masculino</li>
+        </ul>
+        <p>Olá! Sou um dos 41 aspirantes da Turma Turing, a terceira turma do projeto Alpha Edtech do Instituto Alpha Lumen!</p>
+        <p>Nessa jornada, estou aprofundando meus conhecimentos a fim de me tornar um desenvolvedor full-stack, e esse portfólio demonstra o uso exclusivo da linguagem de marcação HTML.</p>
+    </header>
+    <p>Lista de Iframes</p>
+    </ol>
+    <ol>
+        <li>
+            <a href="./iframe.html" target="iframe1">Clique aqui para carregar o Iframe Local no espaço abaixo!</a>
+            <iframe width="100%" height="200px" title="iframe-local" name="iframe1" sandbox></iframe>
+        </li>
+        <li>
+            <iframe src="https://fabio-cesar.github.io/frontend/" allowfullscreen width="100%" height="400" title="Formulário" name="iframe2" sandbox="allow-forms">
+            </iframe>
+        </li>
+        <li>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/KbjLtEgmZ_E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen name="iframe3"></iframe>
+        </li>
+    </ol>
+    <p>Três formas de incorporar um SVG!</p>
+    <ol>
+        <li>
+            <p>Copiando o código e colando em uma tag svg internamente:</p>
+            <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+                <title>Engrenagem</title>
+                <defs>
+                    <image  width="600" height="400" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAlgAAAGQAQMAAABI+4zbAAAAAXNSR0IB2cksfwAAAANQTFRFAAAAp3o92gAAAAF0Uk5TAEDm2GYAAAA0SURBVHic7cEBDQAAAMKg909tDwcUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACPBnbAAAHJz+JVAAAAAElFTkSuQmCC"/>
+                </defs>
+                <style>
+                    .s0 { fill: #ff0000 } 
+                    .s1 { fill: #ffffff } 
+                </style>
+                <use id="Background" href="#img1" x="0" y="0"/>
+                <path id="Camada 1" class="s0" d="m213 223l-22-5-3-36 24-3 13-20-16-24 27-25 18 14 23-9 8-25h34l4 24 23 10 20-11 24 24-10 19 10 22 23 7v33l-23 6-10 19 16 25-29 25-17-17-21 11-7 24-38-1-4-20-23-10-20 13-26-26 17-20z"/>
+                <circle id="Forma 1" class="s1" cx="300" cy="200" r="50"/>
+            </svg>
+        </li>
+        <li>
+            <p>Declarando uma tag img e referenciando o arquivo svg externamente:</p>
+            <img id="svg" src="./assets/images/engrenagem.svg" alt="Uma engrenagem de cor vermelha"/>
+        </li>
+        <li>
+            <p>Declarando uma tag object e referenciando o arquivo svg externamente:</p>
+            <object type="image/svg+xml" data="./assets/images/engrenagem.svg"></object>
+        </li>
+    </ol>
+    <p>Canvas e colocando um arquivo SVG dentro dele! Vou utilizar a tag html &lt;img&gt; da lista anterior.</p>
+    <canvas id="canvas" width="800" height="600">
+    </canvas>
+    <script type="text/javascript">
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        const image = document.getElementById('svg');
+
+        image.addEventListener('load', e => {
+        ctx.drawImage(image, 0, 0);
+        });
+    </script>
+
+</body>
+</html>
